@@ -321,7 +321,7 @@ class LeVADocumentUseCase extends DocGenUseCase {
                             key: testIssue.key,
                             description: testIssue.description ?: "",
                             // TODO: change template from isRelatedTo to systemRequirement
-                            systemRequirement: testIssue.requirements.collect{ it.key }.join(", "),
+                            systemRequirement: testIssue.requirements.join(", "),
                             success: testIssue.isSuccess ? "Y" : "N",
                             remarks: testIssue.isMissing ? "not executed" : ""
                         ]
@@ -395,8 +395,8 @@ class LeVADocumentUseCase extends DocGenUseCase {
                         [
                             key: testIssue.key,
                             description: testIssue.description ?: "",
-                            ur_key: testIssue.requirements ? testIssue.requirements.collect{ it.key }.join(", ") : "N/A",
-                            risk_key: tetsIssue.risks ? testIssue.risks.collect{ it.key }.join(", ") : "N/A"
+                            ur_key: testIssue.requirements ? testIssue.requirements.join(", ") : "N/A",
+                            risk_key: tetsIssue.risks ? testIssue.risks.join(", ") : "N/A"
                         ]
                     ]
                 },
@@ -406,8 +406,8 @@ class LeVADocumentUseCase extends DocGenUseCase {
                         [
                             key: testIssue.key,
                             description: testIssue.description ?: "",
-                            ur_key: testIssue.requirements ? testIssue.requirements.collect{ it.key }.join(", ") : "N/A",
-                            risk_key: tetsIssue.risks ? testIssue.risks.collect{ it.key }.join(", ") : "N/A"
+                            ur_key: testIssue.requirements ? testIssue.requirements.join(", ") : "N/A",
+                            risk_key: tetsIssue.risks ? testIssue.risks.join(", ") : "N/A"
                         ]
                     ]
                 }
@@ -465,9 +465,9 @@ class LeVADocumentUseCase extends DocGenUseCase {
                             datetime: testIssue.timestamp ? testIssue.timestamp.replaceAll("T", "</br>") : "N/A",
                             description: testIssue.description ?: "",
                             remarks: testIssue.isMissing ? "not executed" : "",
-                            risk_key: tetsIssue.risks ? testIssue.risks.collect{ it.key }.join(", ") : "N/A",
+                            risk_key: tetsIssue.risks ? testIssue.risks.join(", ") : "N/A",
                             success: testIssue.sSuccess ? "Y" : "N",
-                            ur_key: testIssue.requirements ? testIssue.requirements.collect{ it.key }.join(", ") : "N/A"
+                            ur_key: testIssue.requirements ? testIssue.requirements.join(", ") : "N/A"
                         ]
                     ]
                 },
@@ -479,9 +479,9 @@ class LeVADocumentUseCase extends DocGenUseCase {
                             datetime: testIssue.timestamp ? testIssue.timestamp.replaceAll("T", "</br>") : "N/A",
                             description: testIssue.description ?: "",
                             remarks: testIssue.isMissing ? "not executed" : "",
-                            risk_key: tetsIssue.risks ? testIssue.risks.collect{ it.key }.join(", ") : "N/A",
+                            risk_key: tetsIssue.risks ? testIssue.risks.join(", ") : "N/A",
                             success: testIssue.sSuccess ? "Y" : "N",
-                            ur_key: testIssue.requirements ? testIssue.requirements.collect{ it.key }.join(", ") : "N/A"
+                            ur_key: testIssue.requirements ? testIssue.requirements.join(", ") : "N/A"
                         ]
                     ]
                 },
@@ -525,7 +525,7 @@ class LeVADocumentUseCase extends DocGenUseCase {
                             key: testIssue.key,
                             summary: testIssue.name,
                             // TODO: change template from isRelatedTo to techSpec
-                            techSpec: testIssue.techSpecs.collect{ it.key }.join(", ")
+                            techSpec: testIssue.techSpecs.join(", ")
                         ]
                     ]
                 }
@@ -584,7 +584,7 @@ class LeVADocumentUseCase extends DocGenUseCase {
                             success: testIssue.isSuccess ? "Y" : "N",
                             summary: testIssue.name,
                             // TODO: change template from isRelatedTo to techSpec
-                            techSpec: testIssue.techSpecs.collect{ it.key }.join(", ")
+                            techSpec: testIssue.techSpecs.join(", ")
                         ]
                     ]
                 },
