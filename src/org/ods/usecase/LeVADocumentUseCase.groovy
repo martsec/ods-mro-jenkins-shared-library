@@ -396,7 +396,7 @@ class LeVADocumentUseCase extends DocGenUseCase {
                             key: testIssue.key,
                             description: testIssue.description ?: "",
                             ur_key: testIssue.requirements ? testIssue.requirements.join(", ") : "N/A",
-                            risk_key: tetsIssue.risks ? testIssue.risks.join(", ") : "N/A"
+                            risk_key: testIssue.risks ? testIssue.risks.join(", ") : "N/A"
                         ]
                     ]
                 },
@@ -407,7 +407,7 @@ class LeVADocumentUseCase extends DocGenUseCase {
                             key: testIssue.key,
                             description: testIssue.description ?: "",
                             ur_key: testIssue.requirements ? testIssue.requirements.join(", ") : "N/A",
-                            risk_key: tetsIssue.risks ? testIssue.risks.join(", ") : "N/A"
+                            risk_key: testIssue.risks ? testIssue.risks.join(", ") : "N/A"
                         ]
                     ]
                 }
@@ -465,7 +465,7 @@ class LeVADocumentUseCase extends DocGenUseCase {
                             datetime: testIssue.timestamp ? testIssue.timestamp.replaceAll("T", "</br>") : "N/A",
                             description: testIssue.description ?: "",
                             remarks: testIssue.isMissing ? "not executed" : "",
-                            risk_key: tetsIssue.risks ? testIssue.risks.join(", ") : "N/A",
+                            risk_key: testIssue.risks ? testIssue.risks.join(", ") : "N/A",
                             success: testIssue.sSuccess ? "Y" : "N",
                             ur_key: testIssue.requirements ? testIssue.requirements.join(", ") : "N/A"
                         ]
@@ -479,7 +479,7 @@ class LeVADocumentUseCase extends DocGenUseCase {
                             datetime: testIssue.timestamp ? testIssue.timestamp.replaceAll("T", "</br>") : "N/A",
                             description: testIssue.description ?: "",
                             remarks: testIssue.isMissing ? "not executed" : "",
-                            risk_key: tetsIssue.risks ? testIssue.risks.join(", ") : "N/A",
+                            risk_key: testIssue.risks ? testIssue.risks.join(", ") : "N/A",
                             success: testIssue.sSuccess ? "Y" : "N",
                             ur_key: testIssue.requirements ? testIssue.requirements.join(", ") : "N/A"
                         ]
