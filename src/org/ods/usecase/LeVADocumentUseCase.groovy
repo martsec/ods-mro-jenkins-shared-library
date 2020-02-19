@@ -466,7 +466,7 @@ class LeVADocumentUseCase extends DocGenUseCase {
                             description: testIssue.description ?: "",
                             remarks: testIssue.isMissing ? "not executed" : "",
                             risk_key: testIssue.risks ? testIssue.risks.join(", ") : "N/A",
-                            success: testIssue.sSuccess ? "Y" : "N",
+                            success: testIssue.isSuccess ? "Y" : "N",
                             ur_key: testIssue.requirements ? testIssue.requirements.join(", ") : "N/A"
                         ]
                     ]
@@ -480,7 +480,7 @@ class LeVADocumentUseCase extends DocGenUseCase {
                             description: testIssue.description ?: "",
                             remarks: testIssue.isMissing ? "not executed" : "",
                             risk_key: testIssue.risks ? testIssue.risks.join(", ") : "N/A",
-                            success: testIssue.sSuccess ? "Y" : "N",
+                            success: testIssue.isSuccess ? "Y" : "N",
                             ur_key: testIssue.requirements ? testIssue.requirements.join(", ") : "N/A"
                         ]
                     ]
